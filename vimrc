@@ -18,6 +18,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Add or remove your Bundles here:
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'flazz/vim-colorschemes'
@@ -45,8 +46,6 @@ let g:ctrlp_custom_ignore = {'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|node_modul
 let g:mustache_abbreviations = 1
 
 let g:NERDTreeWinSize = 40
-
-map <C-n> :NERDTreeToggle<CR>
 
 " Allow switching buffers without saving
 set hidden
@@ -106,9 +105,33 @@ endfunction
 " Key Mappings
 let mapleader = ","
 
+noremap <C-o> :CtrlPMRU<cr>
+noremap <C-n> :NERDTreeToggle<cr>
+
+nnoremap <leader>a :Ack 
 nnoremap <leader><space> :noh<cr>
-map <leader><leader> :call TrimWhiteSpace()<CR>
-map <leader>u :e ++ff=dos<CR>:setlocal ff=unix<CR>
+nnoremap <leader><leader> :call TrimWhiteSpace()<cr>
+nnoremap <leader>u :e ++ff=dos<cr>:setlocal ff=unix<cr>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gr :Gread<cr>
+
+nnoremap <leader>ga :Git add %:p<cr><cr>
+nnoremap <leader>gaa :Git add -A<cr><cr>
+nnoremap <leader>gc :Gcommit -v -q<cr>
+nnoremap <leader>gt :Gcommit -v -q %:p<cr>
+nnoremap <leader>ge :Gedit<cr>
+nnoremap <leader>gw :Gwrite<cr><cr>
+nnoremap <leader>gl :silent! Glog<cr>:bot copen<cr>
+nnoremap <leader>gp :Ggrep<Space>
+nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>gb :Git branch<Space>
+nnoremap <leader>go :Git checkout<Space>
+nnoremap <leader>gps :!git push<cr>
+nnoremap <leader>gpl :!git pull --rebase<cr>
 
 set showbreak=↪
 
@@ -117,5 +140,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+set undofile
+set undodir=~/.vim/_undo/
 set backupdir=~/.vim/_backup/
 set directory=~/.vim/_swp/
