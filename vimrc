@@ -21,6 +21,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'Valloric/YouCompleteMe'
 
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'dsawardekar/ember.vim'
@@ -59,6 +60,14 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+" Numbers
+set relativenumber
+set numberwidth=4
 
 " PHP Settings
 autocmd BufRead,BufNewFile *.php set sw=3 sts=3 ts=3
