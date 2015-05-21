@@ -22,12 +22,13 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
 
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'dsawardekar/ember.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'adoy/vim-php-refactoring-toolbox'
 
 " Required:
 call neobundle#end()
@@ -47,6 +48,8 @@ let g:mustache_abbreviations = 1
 
 let g:NERDTreeWinSize = 40
 
+set lazyredraw
+
 " Allow switching buffers without saving
 set hidden
 
@@ -61,10 +64,11 @@ set shiftwidth=2
 set expandtab
 
 " Make it obvious where 80 characters is
-set textwidth=100
+set textwidth=120
 set colorcolumn=+1
 
 " Numbers
+set number
 set relativenumber
 set numberwidth=4
 
