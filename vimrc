@@ -22,12 +22,14 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'junegunn/vim-easy-align'
 "NeoBundle 'Valloric/YouCompleteMe'
 
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'dsawardekar/ember.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'groenewege/vim-less'
 NeoBundle 'adoy/vim-php-refactoring-toolbox'
 
 " Required:
@@ -40,6 +42,12 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|node_modules\|bower_components\|public\/images\|public\/system\|log$\|tmp$'}
