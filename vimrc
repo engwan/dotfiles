@@ -16,6 +16,7 @@ call neobundle#begin(expand('/home/engwan/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
+NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
@@ -31,6 +32,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'adoy/vim-php-refactoring-toolbox'
+NeoBundle 'sudar/vim-arduino-syntax'
 
 " Required:
 call neobundle#end()
