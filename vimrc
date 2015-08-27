@@ -33,6 +33,7 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'adoy/vim-php-refactoring-toolbox'
 NeoBundle 'sudar/vim-arduino-syntax'
+NeoBundle 'elixir-lang/vim-elixir'
 
 " Required:
 call neobundle#end()
