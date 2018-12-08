@@ -34,6 +34,7 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'adoy/vim-php-refactoring-toolbox'
 NeoBundle 'sudar/vim-arduino-syntax'
 NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'darthmall/vim-vue'
 
 " Required:
 call neobundle#end()
@@ -53,7 +54,7 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Sane Ignore For ctrlp
-let g:ctrlp_custom_ignore = {'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|node_modules\|bower_components\|public\/images\|public\/system\|log$\|tmp$'}
+let g:ctrlp_custom_ignore = {'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|node_modules\|bower_components\|public\/images\|public\/system\|log$\|tmp\|_build\|deps\|dist$'}
 
 let g:mustache_abbreviations = 1
 
@@ -117,13 +118,18 @@ function TrimWhiteSpace()
   ''
 endfunction
 
+set list
+set listchars=tab:>-
+
 " Key Mappings
 let mapleader = ","
+
+map <leader>c :CtrlPClearCache<cr>
 
 noremap <C-o> :CtrlPMRU<cr>
 noremap <C-n> :NERDTreeToggle<cr>
 
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader><leader> :call TrimWhiteSpace()<cr>
 nnoremap <leader>u :e ++ff=dos<cr>:setlocal ff=unix<cr>
